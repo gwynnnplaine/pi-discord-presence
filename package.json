@@ -1,0 +1,55 @@
+{
+  "name": "@gwynnnplaine/pi-discord-presence",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "Discord Rich Presence for Pi — shows live agent activity (editing, reading, running commands) in your Discord status, with project, model, and a session timer.",
+  "author": "gwynnnplaine <vladyslav.hrabovyii@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwynnnplaine/pi-discord-presence.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gwynnnplaine/pi-discord-presence/issues"
+  },
+  "homepage": "https://github.com/gwynnnplaine/pi-discord-presence#readme",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-agent",
+    "discord",
+    "rich-presence",
+    "discord-rpc",
+    "extension"
+  ],
+  "files": [
+    "index.ts",
+    "src",
+    "defaults.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "image": "https://raw.githubusercontent.com/gwynnnplaine/pi-discord-presence/main/assets/banner.png"
+  },
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@xhayper/discord-rpc": "^1.3.4"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@types/node": "^22",
+    "typescript": "^5.5.0"
+  }
+}
